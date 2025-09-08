@@ -1,0 +1,70 @@
+[
+  {
+    "id": "booking_1",
+    "referenceId": "EVT-2024-001",
+    "status": "confirmed",
+    "personalDetails": {
+      "fullName": "Priya Sharma",
+      "age": 28,
+      "email": "priya.sharma@email.com",
+      "phone": "+91 9876543210",
+      "address": "123 MG Road, Bangalore, Karnataka 560001"
+    },
+    "eventDetails": {
+      "eventType": "wedding",
+      "preferredDate": "2024-12-15",
+      "attendees": 300,
+      "budgetRange": "1L-3L",
+      "notes": "Traditional South Indian wedding ceremony"
+    },
+    "selectedServices": [
+      {
+        "serviceId": "service_1",
+        "quantity": 300,
+        "unitPrice": 800,
+        "subtotal": 240000
+      },
+      {
+        "serviceId": "service_3",
+        "quantity": 1,
+        "unitPrice": 15000,
+        "subtotal": 15000
+      }
+    ],
+    "selectedVenue": "venue_1",
+    "totalEstimatedCost": 305000,
+    "createdAt": "2024-01-15T10:30:00Z",
+    "updatedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "booking_2",
+    "referenceId": "EVT-2024-002",
+    "status": "pending",
+    "personalDetails": {
+      "fullName": "Rahul Kumar",
+      "age": 32,
+      "email": "rahul.kumar@email.com",
+      "phone": "+91 9876543211",
+      "address": "456 Park Street, Mumbai, Maharashtra 400001"
+    },
+    "eventDetails": {
+      "eventType": "corporate",
+      "preferredDate": "2024-11-20",
+      "attendees": 150,
+      "budgetRange": "50k-1L",
+      "notes": "Annual company conference"
+    },
+    "selectedServices": [
+      {
+        "serviceId": "service_2",
+        "quantity": 150,
+        "unitPrice": 500,
+        "subtotal": 75000
+      }
+    ],
+    "selectedVenue": "venue_3",
+    "totalEstimatedCost": 100000,
+    "createdAt": "2024-01-16T14:20:00Z",
+    "updatedAt": "2024-01-16T14:20:00Z"
+  }
+]

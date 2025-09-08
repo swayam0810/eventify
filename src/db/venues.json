@@ -1,0 +1,50 @@
+[
+  {
+    "id": "venue_1",
+    "name": "Grand Ballroom",
+    "type": "wedding_hall",
+    "capacity": 500,
+    "location": "Downtown City Center",
+    "description": "Elegant ballroom with crystal chandeliers and marble floors",
+    "basePrice": 50000,
+    "amenities": ["Sound System", "Lighting", "Stage", "Parking"],
+    "images": ["ballroom1.jpg", "ballroom2.jpg"],
+    "availability": true
+  },
+  {
+    "id": "venue_2",
+    "name": "Garden Pavilion",
+    "type": "outdoor",
+    "capacity": 200,
+    "location": "Green Valley Resort",
+    "description": "Beautiful outdoor venue surrounded by gardens",
+    "basePrice": 30000,
+    "amenities": ["Garden View", "Gazebo", "Fountain", "Parking"],
+    "images": ["garden1.jpg", "garden2.jpg"],
+    "availability": true
+  },
+  {
+    "id": "venue_3",
+    "name": "Corporate Conference Hall",
+    "type": "corporate",
+    "capacity": 150,
+    "location": "Business District",
+    "description": "Modern conference hall with AV equipment",
+    "basePrice": 25000,
+    "amenities": ["Projectors", "Sound System", "WiFi", "Catering Area"],
+    "images": ["conference1.jpg", "conference2.jpg"],
+    "availability": true
+  },
+  {
+    "id": "venue_4",
+    "name": "Rooftop Terrace",
+    "type": "party",
+    "capacity": 100,
+    "location": "Sky Tower",
+    "description": "Stunning city views from 20th floor terrace",
+    "basePrice": 35000,
+    "amenities": ["City View", "Bar Setup", "Lounge Area", "Elevator Access"],
+    "images": ["rooftop1.jpg", "rooftop2.jpg"],
+    "availability": true
+  }
+]

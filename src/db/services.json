@@ -1,0 +1,62 @@
+[
+  {
+    "id": "service_1",
+    "name": "Premium Catering",
+    "type": "catering",
+    "description": "Multi-cuisine buffet with live counters",
+    "basePrice": 800,
+    "unit": "per_person",
+    "category": "food",
+    "features": ["Live Stations", "Premium Menu", "Service Staff"]
+  },
+  {
+    "id": "service_2",
+    "name": "Standard Catering",
+    "type": "catering",
+    "description": "Traditional buffet with popular dishes",
+    "basePrice": 500,
+    "unit": "per_person",
+    "category": "food",
+    "features": ["Buffet Setup", "Standard Menu", "Service Staff"]
+  },
+  {
+    "id": "service_3",
+    "name": "Flower Decoration",
+    "type": "decoration",
+    "description": "Beautiful floral arrangements for venue",
+    "basePrice": 15000,
+    "unit": "package",
+    "category": "decoration",
+    "features": ["Fresh Flowers", "Table Arrangements", "Stage Decoration"]
+  },
+  {
+    "id": "service_4",
+    "name": "Photography Package",
+    "type": "photography",
+    "description": "Professional event photography",
+    "basePrice": 20000,
+    "unit": "package",
+    "category": "photography",
+    "features": ["2 Photographers", "Edited Photos", "Online Gallery"]
+  },
+  {
+    "id": "service_5",
+    "name": "DJ & Music",
+    "type": "entertainment",
+    "description": "Professional DJ with sound system",
+    "basePrice": 12000,
+    "unit": "package",
+    "category": "entertainment",
+    "features": ["Professional DJ", "Sound System", "Lighting"]
+  },
+  {
+    "id": "service_6",
+    "name": "Basic Decoration",
+    "type": "decoration",
+    "description": "Simple and elegant venue decoration",
+    "basePrice": 8000,
+    "unit": "package",
+    "category": "decoration",
+    "features": ["Balloon Arrangements", "Fabric Draping", "Table Setup"]
+  }
+]
