@@ -42,7 +42,7 @@ const Index = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <Calendar className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">EventPro</span>
+            <span className="text-xl font-bold">SWAYAM</span>
           </div>
           
           <div className="flex items-center gap-4">
@@ -132,7 +132,7 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose EventPro?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose SWAYAM?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We provide comprehensive event management services with attention to every detail
             </p>
@@ -309,10 +309,10 @@ const Index = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <Calendar className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">EventPro</span>
+              <span className="text-xl font-bold">SWAYAM</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              © 2024 EventPro. Making your events extraordinary.
+              © 2024 SWAYAM. Making your events extraordinary.
             </div>
           </div>
         </div>
