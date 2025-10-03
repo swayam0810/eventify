@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -46,6 +47,11 @@ const Index = () => {
           </div>
           
           <div className="flex items-center gap-4">
+            <Link to="/gallery">
+              <Button variant="ghost" className="hidden sm:flex">
+                Gallery
+              </Button>
+            </Link>
             <Button
               variant="ghost"
               onClick={() => setCurrentView('dashboard')}
