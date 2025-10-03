@@ -88,23 +88,37 @@ export function ReviewStep({ bookingData, onPrevious }: ReviewStepProps) {
     
     try {
       // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       const referenceId = generateBookingReference();
+      const timestamp = new Date().toISOString();
+      
+      const newBooking = {
+        id: `booking-${Date.now()}`,
+        referenceId,
+        status: 'pending' as const,
+        personalDetails: bookingData.personalDetails as any,
+        eventDetails: bookingData.eventDetails as any,
+        selectedServices: bookingData.selectedServices,
+        selectedVenue: bookingData.selectedVenue,
+        totalEstimatedCost: calculateTotal(),
+        createdAt: timestamp,
+        updatedAt: timestamp,
+      };
+
+      // Save to localStorage
+      const { saveBooking } = await import('@/lib/data');
+      saveBooking(newBooking);
       
       toast({
         title: "Booking Submitted Successfully!",
         description: `Your booking reference is ${referenceId}. We'll contact you within 24 hours.`,
       });
 
-      // In a real app, you would save to database/JSON file here
-      console.log('Booking submitted:', {
-        ...bookingData,
-        referenceId,
-        status: 'pending',
-        totalEstimatedCost: calculateTotal(),
-        createdAt: new Date().toISOString(),
-      });
+      // Redirect to dashboard after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/#dashboard';
+      }, 2000);
 
     } catch (error) {
       toast({

@@ -73,7 +73,7 @@ export const getServices = (): Service[] => {
 };
 
 export const getBookings = (): Booking[] => {
-  return bookingsData as Booking[];
+  return getAllBookings();
 };
 
 export const getVenueById = (id: string): Venue | undefined => {
@@ -124,4 +124,19 @@ export const generateBookingReference = (): string => {
   const year = new Date().getFullYear();
   const randomNum = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
   return `EVT-${year}-${randomNum}`;
+};
+
+// Save booking to localStorage
+export const saveBooking = (booking: Booking): void => {
+  const existingBookings = getBookings();
+  const updatedBookings = [...existingBookings, booking];
+  localStorage.setItem('bookings', JSON.stringify(updatedBookings));
+};
+
+// Get bookings from localStorage merged with JSON data
+export const getAllBookings = (): Booking[] => {
+  const jsonBookings = bookingsData as Booking[];
+  const localBookingsStr = localStorage.getItem('bookings');
+  const localBookings = localBookingsStr ? JSON.parse(localBookingsStr) : [];
+  return [...jsonBookings, ...localBookings];
 };
