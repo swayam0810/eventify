@@ -29,6 +29,8 @@ export function PersonalDetailsStep({ data, onUpdate, onNext }: PersonalDetailsS
       newErrors.fullName = 'Please enter your full name (min 2 characters)';
     } else if (formData.fullName.trim().length > 100) {
       newErrors.fullName = 'Name must be less than 100 characters';
+    } else if (!/^[a-zA-Z\s'-]+$/.test(formData.fullName.trim())) {
+      newErrors.fullName = 'Name can only contain letters, spaces, hyphens, and apostrophes';
     }
 
     // Email validation
