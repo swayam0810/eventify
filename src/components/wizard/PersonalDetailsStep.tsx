@@ -24,24 +24,35 @@ export function PersonalDetailsStep({ data, onUpdate, onNext }: PersonalDetailsS
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
+    // Full name validation
     if (!formData.fullName || formData.fullName.trim().length < 2) {
       newErrors.fullName = 'Please enter your full name (min 2 characters)';
+    } else if (formData.fullName.trim().length > 100) {
+      newErrors.fullName = 'Name must be less than 100 characters';
     }
 
+    // Email validation
     if (!formData.email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+      newErrors.email = 'Enter a valid email address';
+    } else if (formData.email.length > 255) {
+      newErrors.email = 'Email must be less than 255 characters';
     }
 
-    if (!formData.phone || !/^\+?[1-9]\d{6,14}$/.test(formData.phone.replace(/\s/g, ''))) {
-      newErrors.phone = 'Please enter a valid phone number';
+    // Phone validation
+    if (!formData.phone) {
+      newErrors.phone = 'Enter a valid phone number';
+    } else if (!/^\+?[1-9]\d{6,14}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Enter a valid phone number';
     }
 
+    // Address validation
     if (!formData.address || formData.address.trim().length < 10) {
-      newErrors.address = 'Please enter your complete address';
+      newErrors.address = 'Please enter your address (minimum 10 characters)';
     }
 
+    // Age validation (optional field)
     if (formData.age && (formData.age < 1 || formData.age > 120)) {
-      newErrors.age = 'Please enter a valid age';
+      newErrors.age = 'Enter a valid age (1-120)';
     }
 
     setErrors(newErrors);
@@ -177,7 +188,12 @@ export function PersonalDetailsStep({ data, onUpdate, onNext }: PersonalDetailsS
       {/* Action Buttons */}
       <div className="flex justify-between pt-6">
         <div></div>
-        <Button onClick={handleSubmit} size="lg" className="min-w-32">
+        <Button 
+          onClick={handleSubmit} 
+          size="lg" 
+          className="min-w-32"
+          disabled={!formData.fullName || !formData.email || !formData.phone || !formData.address}
+        >
           Next Step
         </Button>
       </div>

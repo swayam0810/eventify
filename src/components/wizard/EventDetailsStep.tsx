@@ -226,7 +226,12 @@ export function EventDetailsStep({ data, onUpdate, onNext, onPrevious }: EventDe
         <Button onClick={onPrevious} variant="outline" size="lg">
           Previous
         </Button>
-        <Button onClick={handleSubmit} size="lg" className="min-w-32">
+        <Button 
+          onClick={handleSubmit} 
+          size="lg" 
+          className="min-w-32"
+          disabled={!formData.eventType || !formData.preferredDate || !formData.attendees || !formData.budgetRange}
+        >
           Next Step
         </Button>
       </div>
